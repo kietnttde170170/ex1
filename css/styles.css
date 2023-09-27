@@ -7,8 +7,23 @@ body{
 	width: 1200px;
 	margin: 0 auto;
 }
+
 	
- 
+.row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 10px;
+	
+}
+
+.left-column {
+	grid-column: 1;
+}
+
+.tkiem {
+	grid-column: 2;
+	float: right;
+}
 
 nav{
 	height: 40px;
@@ -36,21 +51,17 @@ nav ul li a{
 	color: #fff;
 	font-family: Arial;
 	line-height: 40px;
-	font-size: 18x;
-}
-nav .tkiem {
-	float: right;
+	font-size: 18xp;
 }
 
 .intro{
 	margin-top: 60px;
 	position: relative;
 	margin-bottom: 5px;
-	background-color: #000;
+	
 }
 .intro .info{
-    margin-top: 20px;
-	height: 60px;
+    height: 60px;
 	width: 1200px;
 	background: #000;
 	opacity: 0.8;
@@ -68,6 +79,7 @@ nav .tkiem {
 	position: absolute;
 	bottom:2px;
 	right: 90px;
+	margin-right: 55px;
 }
 .btn button{
 	padding: 12px 12px;
@@ -84,13 +96,17 @@ nav .tkiem {
 	color: #fff;
 }
 /**/
+.container-2{
+    display: flex;
+	justify-content: space-between;
+}
 aside{
 	border-left: 1px solid #c6c6c6;
 	width: 298px;
-	float: left;
+	flex: 1;
 }
 
-.intro, .news, .info-1, .video{
+.intro, .info-1, .video{
 	margin-bottom: 15px;
 }
 h3{
@@ -116,7 +132,7 @@ h3{
 	border-top: 1px solid #ccc;
 }
 .list ul li a{
-	color: #000;
+	color: #000000;
 	text-decoration: none;
 }
 .list ul li:hover{
@@ -129,14 +145,15 @@ h3{
 article{
 	border: 1px solid #ccc;
 	border-bottom: none;
-	width: 900px;
+	/*width: calc(100% - 298px)*/
 	min-height: 1040px;
 	box-shadow: 2px 2px 2px #ccc;
+	flex: 3;
 }
 .content{
-	width: 500px;
 	padding: 0px 20px;
 	margin-bottom: 0px;
+	/*width: calc(100% - 298px)*/
 }
 .content h2 {
 	color: rgb(255, 153, 0);
@@ -148,7 +165,7 @@ article{
 .teacher{
 	text-align: center;
 	clear: both;
-	width: 900px;
+	/*width: calc(100% - 298px)*/
 	height: 520px;
 	background: rgb(255, 153, 0) ;
 	border-radius: 5px;
@@ -167,7 +184,7 @@ article{
 	padding: 15px 22px;
 }
 .people .personal{
-	width: 270px;
+	width: 240px;
 	height: 400px;
 	background: #fff;
 	float: left;
@@ -178,7 +195,7 @@ article{
 
 .people .personal img{
 	margin-top: 15px;
-	width: 270px;
+	width: 200px;
 	height: 270px;
 	border-top-left-radius: 30px;
 	border-top-right-radius: 30px;
@@ -191,7 +208,10 @@ article{
 a{
     color: #000;
 }
-	
+.majors{
+	/*width: calc(100% - 298px);*/
+	flex: 1;
+}	
 
 /*footer*/
 footer{
